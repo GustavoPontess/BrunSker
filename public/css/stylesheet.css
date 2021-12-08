@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #aaa; border: 3px solid rgba(0, 0, 0, 0.904);
+}
+
+body {
+    margin: 0;
+    color: #030303 ;
+}
+/* Menu do sit */
+header ul {
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+header nav {
+    background-color: #161616a4;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    color: #FFF;
+}
+
+header p {
+    color: #FFF;
+    margin: 22px 0 22px 0;
+}
+header nav{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+}
+header ul{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+}
+
+header li {
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    padding: 10px;
+}
+
+header button {
+    background-color: transparent;
+    border: none;
+    color: #FFF;
+    font-size: 36px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+
+header li:hover, button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+header h1:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+header button:focus~ul {
+    height: 205px;  /* Mudar aqui para alterar o tamanho do menu para dispositivos moveis*/
+}
+.text-left{
+    margin-left: 3rem;
+    max-width: 520px;
+    max-height: 500px
+}
+/* Fim Menu do sit */
+/* Resposividade */
+@media (max-width: 800px) {
+
+    header nav{
+        flex-direction: column;
+    }
+    header ul{
+        flex-direction: column;
+    }
+
+    header ul {
+        text-align: center;
+        margin: 0;
+        height: 0;
+    }
+
+    header nav {
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 30px;
+        margin: 10px;
+    }
+
+    header button {
+        display: flex;
+    }
+
+    header ul{
+        width: 100%;
+    }
+    header li{
+        width: 100%;
+    }
+    .row{
+        -ms-flex-preferred-size:0;
+        flex-basis:0;
+        -ms-flex-positive:1;
+        flex-grow:1;
+        max-width:100%;
+        justify-content: center
+    }
+    .text-left{
+        margin-left: 0;
+    }
+}
+/* Fim Responsividade */
